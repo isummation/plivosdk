@@ -1,0 +1,31 @@
+{
+	"name": "Plivo SDK",
+	"version": "0.1.0",
+	"slug": "plivosdk",
+	"author": "iSummation Technologies Pvt. Ltd",
+	"homepage": "https://github.com/isummation/plivosdk",
+	"documentation": "https://github.com/isummation/plivosdk",
+	"repository": {
+		"type": "git",
+		"URL": "https://github.com/isummation/plivosdk"
+	},
+	"bugs": "https://github.com/isummation/plivosdk/issues",
+	"shortDescription": "This SDK will provide you with Plivo connectivity for any ColdFusion (CFML) application.",
+	"type": "modules",
+	"license": [
+		{
+			"type": "Apache2",
+			"URL": "http://www.apache.org/licenses/LICENSE-2.0"
+		}
+	],
+	"contributors": ["Pritesh Patel"],
+	"dependencies": {},
+	"devDependencies": {},
+	"installPaths": {},
+	"ignore": ["**/.*", "test-harness", "*/.md"],
+	"scripts": {
+		"toMaster": "recipe build/toMaster.boxr",
+		"format": "cfformat run models/**/*.cfc,test-harness/tests/**/*.cfc,*.cfc --overwrite",
+		"format:check": "cfformat check models/**/*.cfc,test-harness/tests/**/*.cfc,*.cfc"
+	}
+}
