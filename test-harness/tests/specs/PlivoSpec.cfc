@@ -1,6 +1,8 @@
 component extends="coldbox.system.testing.BaseTestCase" {
 
 	variables.targetEngine = getUtil().getSystemSetting( "ENGINE", "localhost" );
+	variables.senderNo = getUtil().getSystemSetting( "SENDERNO" );
+	variables.receiverNo = getUtil().getSystemSetting( "RECEIVERNO" );
 	function beforeAll(){
 		variables.plivo = new plivosdk.models.plivo(
 			getUtil().getSystemSetting( "AUTHID" ),
@@ -25,8 +27,8 @@ component extends="coldbox.system.testing.BaseTestCase" {
 
 				it( "Send SMS", function(){
 					var args = {
-						src         : "+12013503434",
-						dst         : "+919099023644",
+						src         : "#variables.senderNo#",
+						dst         : "#variables.receiverNo#",
 						message     : "Hello this is test",
 						callbackURL : "https://t.local.fearticket.com/"
 					};
